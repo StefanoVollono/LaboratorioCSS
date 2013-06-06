@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Generare icon fonts con Fontello :: Laboratorio CSS</title>
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+		@font-face {
+			font-family: 'fontello';
+			src: url("common/font/fontello/fontello.eot");
+			src: url("common/font/fontello/fontello.eot#iefix") format('embedded-opentype'), 
+				 url("common/font/fontello/fontello.woff") format('woff'), 
+				 url("common/font/fontello/fontello.ttf") format('truetype'), 
+				 url("common/font/fontello/fontello.svg#fontello") format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		.w3c{
+			font-size: 100px;
+			font-family: serif;
+			display: block;
+			text-align: center;
+		}	
+		.w3c .icon{
+			font-family: fontello;
+			color: #025A9A;
+			*zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x33;&nbsp;');
+		}
+		.w3c .icon:before{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+			content: "\0033";
+		}
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Generare icon fonts con Fontello</h1>
+			<p id="description">Sempre più spesso vengono usati font icon per gestire le icone del proprio siti o blog. Abbiamo scelto tra i vari servizi online di font generator, "Fontello", e devo dire che ci è piaciuto molto!</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+				
+			<span class="w3c"><span class="icon"></span>consortium</span>
+				
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
