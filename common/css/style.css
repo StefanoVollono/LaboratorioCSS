@@ -64,7 +64,7 @@ input,select,option,button,textarea,fieldset{font-family:Arial, Helvetica, sans-
 a:hover, a:active{color:#383838;}
 strong{font-weight:bold;}
 .clear{clear:both}
-a.logo{display: block;width: 36px;height: 65px;text-indent: -9999px;background: url("../img/structure/logoLabcss.png") no-repeat;margin: 20px auto 0;}
+a.logo{display: block;width: 36px;height: 65px;text-indent: -9999px;background: url("https://github.com/StefanoVollono/LaboratorioCSS/blob/master/common/img/structure/logoLabcss.png") no-repeat;margin: 20px auto 0;}
 #container{width:90%; margin:0 auto; overflow:hidden;}
 #header{border-bottom:1px dotted #ccc; padding-bottom:20px; margin:20px auto 50px;width:600px;}
 h1{font-family:'Maven Pro', sans-serif; font-size:50px; letter-spacing:-1px; color:#FF5500; text-align:center;}
