@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<title>Layout misto a due colonne :: Laboratorio CSS</title>
+<style type="text/css">
+	#corpo{overflow:hidden;background:#efefef;padding:20px;line-height: 23px}
+	#main{float:right;width:100%;position:relative;z-index:5;right:240px;margin-right:-240px;}
+	#main #content{margin-left:240px;background:#e8747b;padding:20px;}
+	#sidebar{float:left;width:200px;position:relative;z-index:10;background:#84DBD4;padding:20px;}	
+</style>
+
+</head>
+
+<body>
+<a class="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo">Laboratorio CSS</a>
+<div id="container">
+	<div id="header">
+		<h1>Layout misto a due colonne</h1>
+		<p class="description">E’ abbastanza “semplice” affiancare due elementi se entrambi hanno la width espressa in pixel o in percentuale ma il discorso si complica in presenza di layout misti. </p>
+	</div>
+	<div id="content">
+	
+	<!-- ESEMPIO -->
+		
+		<div id="corpo">
+		    <div id="main">
+				<div id="content">
+		        	<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
+		    	</div>
+			</div>
+			<div id="sidebar">
+				<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
+			</div>
+		</div>
+		
+	<!-- //ESEMPIO -->
+		
+	</div>
+</div>
+
+</body>
+</html>
