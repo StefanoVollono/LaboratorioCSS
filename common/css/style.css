@@ -57,14 +57,13 @@ textarea{-webkit-transition: all 0.2s ease;-moz-transition: all 0.2s ease;-o-tra
 
 /* ==== Common rules 
 ========================= */
-html,body{height:100%;}
 body{font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#585C61;}
 a:link, a:visited{color:#FF5500; text-decoration:none; outline:none;}
 input,select,option,button,textarea,fieldset{font-family:Arial, Helvetica, sans-serif;}
 a:hover, a:active{color:#383838;}
 strong{font-weight:bold;}
 .clear{clear:both}
-#logo{display: block;width: 36px;height: 65px;text-indent: -9999px;background: url("commmon/img/structure/logoLabcss.png") no-repeat;margin: 20px auto 0;}
+#logo{display: block;width: 36px;height: 65px;/*text-indent: -9999px;background: url("common/img/structure/logoLabcss.png") no-repeat;*/margin:20px auto 0;}
 #container{width:90%; margin:0 auto; overflow:hidden;}
 #header{border-bottom:1px dotted #ccc; padding-bottom:20px; margin:20px auto 50px;width:600px;}
 h1{font-family:'Maven Pro', sans-serif; font-size:50px; letter-spacing:-1px; color:#FF5500; text-align:center;}
