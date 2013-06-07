@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Meta Tag X-UA-Compatible e Google Chrome Frame :: Laboratorio CSS</title>
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	
+	<!-- META DA AGGIUNGERE -->
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"> 
+	
+	<!-- REGOLE PER STILIZZARE L'OVERLAY -->
+	<style>
+    	/* 
+		.chromeFrameOverlayContent{}
+		.chromeFrameOverlayContent iframe{}
+		.chromeFrameOverlayCloseBar{}
+		.chromeFrameOverlayUnderlay{}
+		*/
+    </style> 
+</head>
+
+<body>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Meta Tag X-UA-Compatible e Google Chrome Frame</h1>
+			<p id="description">Il Meta-tag in questione, la cui documentazione è consultabile a questo link, è stato inserito da Microsoft con l’uscita di Internet Explorer 8 per far si che anche gli utenti con IE8 potessero visualizzare correttamente i siti web in oggetto.</p>
+		</div>
+	</div>
+	
+	<script>
+	window.attachEvent("onload", function() {
+		CFInstall.check({
+		mode: "overlay",
+		destination: "http://www.waikiki.com"
+		});
+	});
+    </script>
+</body>
+</html>
