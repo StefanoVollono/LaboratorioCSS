@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Firefox e il bug del text-overflow:ellipsis :: Laboratorio CSS</title>
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+		#content{position:relative;height:100px;}
+		div#positioned{width:100%; height:100px; position:absolute; top:0px; left:0px; background:#ccc; /* z-index:1; */}
+		p#text{width:400px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;line-height:100px}
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Firefox e il bug del text-overflow:ellipsis</h1>
+			<p id="description">I puntini si sospensione ottenuti dalla proprietà text-overflow:ellipsis danno origine ad un bug di sovrapposizione in Firefox. Vediamo meglio nel dettaglio.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+		
+			<div id="positioned"></div>
+			<p id="text">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
+			
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
