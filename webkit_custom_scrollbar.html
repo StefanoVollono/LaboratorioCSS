@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Scrollbar personalizzata con webkit :: Laboratorio CSS</title>
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+		div.overflow{height: 150px;overflow: scroll;background: #efefef;padding: 20px;}
+		div.overflow p{margin-bottom:20px;font-size:15px;line-height:20px}
+		div.overflow p:last-child{margin:0}
+		
+		/* SCROLLBAR */
+		::-webkit-scrollbar{width:10px;}
+		::-webkit-scrollbar-track{border-radius:10px; background:#eee; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.1);}
+		::-webkit-scrollbar-thumb{border-radius:10px; background:#bbb;}
+		
+		/* HORIZONTAL BAR*/
+		::-webkit-scrollbar:horizontal{height:10px;}
+		::-webkit-scrollbar-track:horizontal{background:#ddd; box-shadow:none;}
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Scrollbar personalizzata con webkit</h1>
+			<p id="description">Webkit affida nuovamente ai css la personalizzazione della scrollbar attraverso l'uso di alcuni pseudo-elementi. Vediamo di che si tratta.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+		
+			<div class="overflow">
+				<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
+				<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
+				<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
+			</div>			
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
