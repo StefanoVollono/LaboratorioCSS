@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Effetto luce pulsante :: Laboratorio CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href="../common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		body{background:url("img/bar.jpg");background-size:cover;}
+		h1,p{color:white}
+		h1{text-shadow: 0px 0 10px white;}
+		
+		h2{
+			font-family:Pacifico, sans-serif;
+			font-size:75px;
+			width:320px;
+			padding:30px;
+			margin:50px auto;
+			font-weight:normal;
+			text-align:center;
+			color:#fff;
+			border-radius:20px;
+			background:url("img/bgH2.jpg") no-repeat;
+			border:5px solid #102E51;
+			text-shadow: 0px 0 10px white;
+			
+			-webkit-animation:light 700ms ease-out infinite alternate;
+			-moz-animation:light 700ms ease-out infinite alternate;
+			-o-animation:light 700ms ease-out infinite alternate;
+			-ms-animation:light 700ms ease-out infinite alternate;
+			
+			animation-name:light;
+			animation-duration:700ms;
+			animation-timing-function:ease-out;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+		}
+
+		@-moz-keyframes light{
+		    0% {
+					box-shadow:0 0 5px rgba(63,163,255,0.2), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }	
+		    100% {
+					box-shadow:0 0 40px rgba(63,163,255,0.8), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }
+		}
+		
+		@-webkit-keyframes light{
+		    0% {
+					box-shadow:0 0 5px rgba(63,163,255,0.2), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }	
+		    100% {
+					box-shadow:0 0 40px rgba(63,163,255,0.8), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }
+		}
+		
+		@-o-keyframes light{
+		    0% {
+					box-shadow:0 0 5px rgba(63,163,255,0.2), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }	
+		    100% {
+					box-shadow:0 0 40px rgba(63,163,255,0.8), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }
+		}
+		
+		@-ms-keyframes light{
+		    0% {
+					box-shadow:0 0 5px rgba(63,163,255,0.2), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }	
+		    100% {
+					box-shadow:0 0 40px rgba(63,163,255,0.8), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }
+		}
+		
+		@keyframes light{
+		    0% {
+					box-shadow:0 0 5px rgba(63,163,255,0.2), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }	
+		    100% {
+					box-shadow:0 0 40px rgba(63,163,255,0.8), 0px 3px 5px rgba(0, 0, 0, 0.5);
+		    }
+		}
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="../common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Effetto luce pulsante</h1>
+			<p id="description">In questo post ho cercato di realizzare una sorta di insegna luminosa con effetto luce a intermittenza</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+				
+			<h2>Wine Bar</h2>
+				
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
