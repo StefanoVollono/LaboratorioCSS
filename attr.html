@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cos'è il valore attr() e come utilizzarlo :: Laboratorio CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css' />
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		*{margin:0;padding:0}
+		body{font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#34383D;}
+		a{display:block; text-decoration:none; margin-bottom:10px; color:#FF5500;}
+		h2{margin-bottom:10px;}
+		.example{width:895px; margin:0 auto; overflow:hidden;}
+		.example div{margin-bottom:30px; float:left; border-right:1px solid #dedede; margin-right:30px; padding-right:20px; height:100px;}
+		.example div:last-child{border:none; margin:0; padding:0;}
+		.example p{margin-bottom:10px;}
+		
+		
+		.example a[href]:after{content:"[" attr(href) "]"; font-size:12px; color:#666;}
+		
+		p:after{content:attr(data-messaggio);}
+
+		.tips{width:200px; position:relative;}
+		.tips:hover:after{border:1px solid #ccc; padding:3px 6px; background:#ddd; content:attr(data-tooltips); position:absolute; right:20px; bottom:-30px;}
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Cos'è il valore attr() e come utilizzarlo</h1>
+			<p id="description">attr è un valore appartenente alla proprietà content. Con esso si possono ottenere diverse tipologie di visualizzazioni dei contenuti.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+			<div class="example">	
+                <div>
+                    <h2>attr()</h2>
+                    <a href="http://www.laboratoriocss.it">Visita il nostro blog </a>
+                    <a href="http://www.w3c.it/it/1/ufficio-italiano-w3c.html">W3C Italia </a>
+                </div>
+    
+                <div>
+                    <h2>attr() + data-*</h2>
+                    <p data-messaggio="www.laboratoriocss.it">Visita il nostro blog: </p>
+                    <p data-messaggio="Italia">W3C </p>
+                </div>
+    
+                <div>
+                    <h2>Tooltips con attr()</h2>
+                    <p class="tips" data-tooltips="www.laboratoriocss.it">Visita il nostro Blog</p>
+                </div>
+			</div>
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
