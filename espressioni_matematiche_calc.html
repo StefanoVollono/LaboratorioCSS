@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Espressioni matematiche css con la proprietà calc() :: Laboratorio CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css' />
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		*{margin:0;padding:0}
+		
+		#contentUno{
+		   border:1px solid rgba(0,0,0,0.4);
+		   width:400px;
+		   padding:0px 10px;
+		   margin:20px auto 0;
+		}
+		#contentUno p{
+		   width:-moz-calc(350px - 50px);
+		   width:-webkit-calc(350px - 50px);
+		   width:calc(350px - 50px);
+		   background:#f0f0f0;
+		   padding:5px;
+		}
+	
+	
+		#contentDue{
+			width:400px;
+			height:200px;
+			background:red;
+			margin:20px auto;
+		}
+		#contentDue .left, 
+		#contentDue .right{
+			width:-moz-calc(50% - 22px); 
+			width:-webkit-calc(50% - 22px); 
+			width:calc(50% - 22px); 
+			height:150px;
+			float:left; 
+			background:green; 
+			border:1px solid #000; 
+			margin:0 5px;
+			padding:5px;
+		}
+	
+	
+		#contentTre{
+			width:400px;
+			height:200px;
+			background:red;
+			margin:0 auto;
+		}
+		#contentTre .left,
+		#contentTre .center,
+		#contentTre .right{
+			width:-moz-calc(400px / 3 - 22px);
+			width:-webkit-calc(400px / 3 - 22px);
+			width:calc(400px / 3 - 22px); 
+			height:150px;
+			float:left; 
+			background:green; 
+			border:1px solid #000; 
+			margin:0 5px;
+			padding:5px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Espressioni matematiche css con la proprietà calc()</h1>
+			<p id="description">Questa proprietà consente di effettuare delle vere e proprie espressioni matematiche utilizzando addizione, sottrazione, moltiplicazione e divisione come valore dei componenti.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+			<div id="contentUno">
+               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+            </div>
+
+            <div id="contentDue">
+               <div class="left">lorem ipsum lorem ipsum</div>
+               <div class="right">lorem ipsum lorem ipsum</div>
+            </div>
+
+            <div id="contentTre">
+               <div class="left">lorem ipsum lorem ipsum</div>
+               <div class="center">lorem ipsum lorem ipsum</div>
+               <div class="right">lorem ipsum lorem ipsum</div>
+            </div>
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
