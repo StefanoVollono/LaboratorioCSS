@@ -10,103 +10,143 @@
 		   License: none (public domain)
 		*/
 		
-		html, body, div, span, applet, object, iframe,
-		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-		a, abbr, acronym, address, big, cite, code,
-		del, dfn, em, img, ins, kbd, q, s, samp,
-		small, strike, strong, sub, sup, tt, var,
-		b, u, i, center,
-		dl, dt, dd, ol, ul, li,
-		fieldset, form, label, legend,
-		table, caption, tbody, tfoot, thead, tr, th, td,
-		article, aside, canvas, details, embed, 
-		figure, figcaption, footer, header, hgroup, 
-		menu, nav, output, ruby, section, summary,
-		time, mark, audio, video {
-			margin: 0;
-			padding: 0;
-			border: 0;
-			font-size: 100%;
-			font: inherit;
-			vertical-align: baseline;
-		}
-		/* HTML5 display-role reset for older browsers */
-		article, aside, details, figcaption, figure, 
-		footer, header, hgroup, menu, nav, section {
-			display: block;
-		}
-		body {
-			line-height: 1;
-		}
-		ol, ul {
-			list-style: none;
-		}
-		blockquote, q {
-			quotes: none;
-		}
-		blockquote:before, blockquote:after,
-		q:before, q:after {
-			content: '';
-			content: none;
-		}
-		table {
-			border-collapse: collapse;
-			border-spacing: 0;
-		}
+		html, body, div, span, applet, object, iframe, 		h1, h2, h3, h4, h5, h6, p, blockquote, pre, 		a, abbr, acronym, address, big, cite, code, 		del, dfn, em, img, ins, kbd, q, s, samp, 		small, strike, strong, sub, sup, tt, var, 		b, u, i, center, 		dl, dt, dd, ol, ul, li, 		fieldset, form, label, legend, 		table, caption, tbody, tfoot, thead, tr, th, td, 		article, aside, canvas, details, embed,  		figure, figcaption, footer, header, hgroup,  		menu, nav, output, ruby, section, summary, 		time, mark, audio, video { 			margin: 0; 			padding: 0; 			border: 0; 			font-size: 100%; 			font: inherit; 			vertical-align: baseline; 		} 		/* HTML5 display-role reset for older browsers */ 		article, aside, details, figcaption, figure,  		footer, header, hgroup, menu, nav, section { 			display: block; 		} 		body { 			line-height: 1; 		} 		ol, ul { 			list-style: none; 		} 		blockquote, q { 			quotes: none; 		} 		blockquote:before, blockquote:after, 		q:before, q:after { 			content: ''; 			content: none; 		} 		table { 			border-collapse: collapse; 			border-spacing: 0; 		}
 
 		
-		/*Metro*/
-		@font-face {
-			font-family:'Gothic725Bold';
-			src: url('Gothic725Bold.eot');
-			src: url('Gothic725Bold.eot?#iefix') format('embedded-opentype'),
-			url('Gothic725Bold.ttf') format('truetype');
-		}
-		body{background:url("rete.png") no-repeat left top;padding:100px;font-family: Gothic725Bold;}
+		/* COMMON */
+		body{background:url("rete.png") no-repeat left top;padding:100px;font-family:Arial;width:3320px;height:2085px;}
 		
-		.header{height:150px;padding:22px 0 0 220px;position:relative;}
-		h1,p{color:black;text-transform: uppercase;font-size:68px;white-space:nowrap}
-		p{font-weight:100}
-		.logo{background: none repeat scroll 0 0 #C31A1F;
-    color: white;
-    font-size: 138px;
-    height: 146px;
-    left: 0;
-    padding: 26px 0 0;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 174px;}
+		/* Colour */
+		.red		{background-color:#c31a1f;}
+		.green	{background-color:#77932c;}
+		.yellow	{background-color:#eab808;}
+		.lilla	{background-color:#9e93bf;}
+		.black	{background-color:#000000;}
+		.blue		{background-color:#05569d;}
+		.azure	{background-color:#0088c5;}
 		
+		/*Suburban Raylways*/
+		.s1			{background-color:#c53330;}
+		.s2			{background-color:#009480;}
+		.s3			{background-color:#970237;}
+		.s4			{background-color:#a2bd30;}
+		.s5			{background-color:#da8d1b;}
+		.s6			{background-color:#e9cd00;}
+		.s8			{background-color:#e5b5b2;}
+		.s9			{background-color:#923c87;}
+		.s11		{background-color:#9d9dc7;}
+		.s13		{background-color:#976c1d;}
+
+		
+		/* Square */
+		.square{border-radius:3px;}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		#header{height:150px;padding:22px 0 0 220px;position:relative;}
+		#header h1, #header p{color: black;text-transform: uppercase;font-size: 70px;white-space: nowrap;font-family: arial;font-weight: bold;line-height: 60px;letter-spacing: -4px;margin-bottom: 17px;}
+		#header p{font-weight:normal;margin:0;letter-spacing:-6px;}
+		.logo { color: white; font-size: 136px; height: 152px; left: 0; padding: 20px 0 0; position: absolute; text-align: center; top: 0; width: 174px; font-weight: bold; } 		
 		
 	</style>
+	
+	
 </head>
 
 <body>
-	<div class="header">
+	<div id="header">
 		<h1>Rete metropolitana e tratte ferroviarie urbane</h1>
 		<p>Underground network and urban railway system</p>
-		<span class="logo">M</span>
+		<span class="logo red">M</span>
 	</div>
-	
-	<ul class="legend">
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-		<li>Metropolitana linea 2 <br /> Underground line 2</li>
-		<li>Metropolitana linea 3 <br /> Underground line 3</li>
-		<li>Metropolitana linea 5 <br /> Underground line 5</li>
-		<li>Metropolitana linea 5 in costruzione <br /> Underground line 5 under construction</li>
-		<li>Metro automatico per Ospedale S. Raffaele <br /> Automatic train to S. Raffaele Hospital</li>
-		<li>Linee ferroviarie suburbane <br /> Suburban railways</li>
-		<li>Stazione accessibile <br /> Accessible station</li>
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-		<li>Metropolitana linea 1 <br /> Underground line 1</li>
-	</ul>
 
+	<dl id="legend">
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+		<dt>Metropolitana linea 2 <br /> Underground line 2</dt>
+		<dt>Metropolitana linea 3 <br /> Underground line 3</dt>
+		<dt>Metropolitana linea 5 <br /> Underground line 5</dt>
+		<dt>Metropolitana linea 5 in costruzione <br /> Underground line 5 under construction</dt>
+		<dt>Metro automatico per Ospedale S. Raffaele <br /> Automatic train to S. Raffaele Hospital</dt>
+		<dt>Linee ferroviarie suburbane <br /> Suburban railways</dt>
+		<dt>Stazione accessibile <br /> Accessible station</dt>
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
+	</dl>
+	
+	<section id="railway">
+		<ul class="redline">		
+			<li>Sesto I Maggio</li>
+			<li>Sesto Rondò</li>
+			<li>Sesto Marelli</li>
+			<li>Villa S. Giovanni</li>
+			<li>Precotto</li>
+			<li>Gorla</li>
+			<li>Turro</li>
+			<li>Rovereto</li>
+			<li>Pasteur</li>
+			<li>Loreto</li>
+			<li>Lima</li>
+			<li>Porta Venezia</li>
+			<li>Palestro</li>
+			<li>San Babila</li>
+			<li>Duomo</li>
+			<li>Cordusio</li>
+			<li>Cairoli</li>
+			<li>Cadorna</li>
+			<li>Conciliazione</li>
+			<li>Pagano
+				<ul>
+					<li>Buonarroti</li>
+					<li>Amendola Fiera</li>
+					<li>Lotto</li>
+					<li>QT8</li>
+					<li>Lampugnano</li>
+					<li>Uruguay</li>
+					<li>Bonola</li>
+					<li>San Leonardo</li>
+					<li>Molino Dorino</li>
+					<li>Pero</li>
+					<li>Rho Fiera</li>
+				</ul>
+				<ul>
+					<li>Wagner</li>
+					<li>De Angeli</li>
+					<li>Gambara</li>
+					<li>Bande Nere</li>
+					<li>Primaticcio</li>
+					<li>Inganni</li>
+					<li>Bisceglie</li>
+				</ul>
+			</li>
+		</ul>
+		
+		
+		
+		<ul class="greenline">
+			
+		</ul>
+		<ul class="yellowline">
+			
+		</ul>
+		<ul class="lillaline">
+			
+		</ul>
+	</section>
 </body>
 </html>
