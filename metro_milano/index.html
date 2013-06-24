@@ -16,6 +16,9 @@
 		/* COMMON */
 		body{background:url("rete.png") no-repeat left top;padding:100px;font-family:Arial;width:3320px;height:2085px;}
 		
+		
+		#railway{position:relative;height:2085px;}
+		
 		/* Colour */
 		.red		{background-color:#c31a1f;}
 		.green	{background-color:#77932c;}
@@ -40,6 +43,61 @@
 		
 		/* Square */
 		.square{border-radius:3px;}
+		
+		/* Macro-aree Linee */
+		#redline{position: absolute; width: 1398px; height: 1390px; top: 237px; left: 1018px;}
+		#greenline{position: absolute;width: 1237px;height: 1536px;top: 221px;right: 323px;}
+		#yellowline{position: absolute;width: 1117px;height: 1310px;bottom: 313px;right: 492px;}
+		#lillaline{position: absolute;width: 44px;height: 530px;top: 426px;left: 1982px;}
+		
+		/* Singole fermate + orientamenti */
+		li{position:absolute;text-transform: uppercase;font-size: 20px;letter-spacing: -1px;white-space: nowrap;word-spacing: 2px;color:black;}
+			li:after{content:'';position:absolute;height:10px;width:100px;}
+				#redline li:after{background-color:#c31a1f;}
+				#greenline li:after{background-color:#77932c;}
+				#yellowline li:after{background-color:#eab808;}
+				#lillaline li:after{background-color:#9e93bf;}
+		
+		li.oblique45{}
+			li.oblique45:after{}
+			li.oblique45.stopRect:before{}
+			
+		li.oblique135{}
+			li.oblique135:after{}
+			li.oblique135.stopRect:before{}
+			
+		li.horizontal{}
+			li.horizontal:after{}
+			li.horizontal.stopRect:before{}
+			
+		li.vertical{}
+			li.vertical:after{}
+			li.vertical.stopRect:before{}
+			
+		
+		/* Elemento Circle */
+		li.stopCirle:before{background-color:white;position:absolute;width:25px;height:25px;border:7px solid;content:'';border-radius:19px}
+			#redline li.stopCirle:before{border-color:#c31a1f;}
+			#greenline li.stopCirle:before{border-color:#77932c;}
+			#yellowline li.stopCirle:before{border-color:#eab808;}
+			#lillaline li.stopCirle:before{border-color:#9e93bf;}
+		
+		/* Elemento Rectangle */
+		li.stopRect:before{position:absolute;width:9px;height:13px;content:'';}
+			#redline li.stopRect:before{background-color:#c31a1f;}
+			#greenline li.stopRect:before{background-color:#77932c;}
+			#yellowline li.stopRect:before{background-color:#eab808;}
+			#lillaline li.stopRect:before{background-color:#9e93bf;}
+		
+		/* Capolinea */
+		li.terminal{font-weight:bold;font-size:27px;border:3px solid;padding:7px;border-radius:10px;letter-spacing:-2px;}
+			li.terminal span{font-weight:normal;text-transform:capitalize;letter-spacing:25px;display:block;}
+			#redline li.terminal{background-color:#f1ccd6;border-color:#c31a1f;}
+			#greenline li.terminal{line-height:29px;background-color:#e8efd9;border-color:#77932c;}
+			#yellowline li.terminal{background-color:#faf1d4;border-color:#eab808;}
+			#lillaline li.terminal{background-color:#ebe9f2;border-color:#9e93bf;}
+		
+		
 		
 		
 		
@@ -70,7 +128,7 @@
 		<span class="logo red">M</span>
 	</div>
 
-	<dl id="legend">
+	<dl id="legend" style="display:none">
 		<dt>Metropolitana linea 1 <br /> Underground line 1</dt>
 		<dt>Metropolitana linea 2 <br /> Underground line 2</dt>
 		<dt>Metropolitana linea 3 <br /> Underground line 3</dt>
@@ -90,61 +148,61 @@
 	</dl>
 	
 	<section id="railway">
-		<ul class="redline">		
-			<li>Sesto I Maggio</li>
-			<li>Sesto Rondò</li>
-			<li>Sesto Marelli</li>
-			<li>Villa S. Giovanni</li>
-			<li>Precotto</li>
-			<li>Gorla</li>
-			<li>Turro</li>
-			<li>Rovereto</li>
-			<li>Pasteur</li>
-			<li>Loreto</li>
-			<li>Lima</li>
-			<li>Porta Venezia</li>
-			<li>Palestro</li>
-			<li>San Babila</li>
-			<li>Duomo</li>
-			<li>Cordusio</li>
-			<li>Cairoli</li>
-			<li>Cadorna</li>
-			<li>Conciliazione</li>
-			<li>Pagano
+		<ul id="redline">		
+			<li class="terminal stopCirle">Sesto I° Maggio FS</li>
+			<li class="trainStop stopRect">Sesto Rondò</li>
+			<li class="trainStop stopRect">Sesto Marelli</li>
+			<li class="trainStop stopRect">Villa S. Giovanni</li>
+			<li class="trainStop stopRect">Precotto</li>
+			<li class="trainStop stopRect">Gorla</li>
+			<li class="trainStop stopRect">Turro</li>
+			<li class="trainStop stopRect">Rovereto</li>
+			<li class="trainStop stopRect">Pasteur</li>
+			<li class="trainStop stopRect">Loreto</li>
+			<li class="trainStop stopRect">Lima</li>
+			<li class="trainStop stopRect">Porta Venezia</li>
+			<li class="trainStop stopRect">Palestro</li>
+			<li class="trainStop stopRect">San Babila</li>
+			<li class="trainStop stopRect">Duomo</li>
+			<li class="trainStop stopRect">Cordusio</li>
+			<li class="trainStop stopRect">Cairoli</li>
+			<li class="trainStop stopRect">Cadorna</li>
+			<li class="trainStop stopRect">Conciliazione</li>
+			<li class="trainStop stopRect">Pagano
 				<ul>
-					<li>Buonarroti</li>
-					<li>Amendola Fiera</li>
-					<li>Lotto</li>
-					<li>QT8</li>
-					<li>Lampugnano</li>
-					<li>Uruguay</li>
-					<li>Bonola</li>
-					<li>San Leonardo</li>
-					<li>Molino Dorino</li>
-					<li>Pero</li>
-					<li>Rho Fiera</li>
+					<li class="trainStop stopRect">Buonarroti</li>
+					<li class="trainStop stopRect">Amendola</li>
+					<li class="trainStop stopRect">Lotto Fieramilanocity</li>
+					<li class="trainStop stopRect">QT8</li>
+					<li class="trainStop stopRect">Lampugnano</li>
+					<li class="trainStop stopRect">Uruguay</li>
+					<li class="trainStop stopRect">Bonola</li>
+					<li class="trainStop stopRect">San Leonardo</li>
+					<li class="trainStop stopRect">Molino Dorino</li>
+					<li class="trainStop stopRect">Pero</li>
+					<li class="terminal stopCirle">Rho Fieramilano</li>
 				</ul>
 				<ul>
-					<li>Wagner</li>
-					<li>De Angeli</li>
-					<li>Gambara</li>
-					<li>Bande Nere</li>
-					<li>Primaticcio</li>
-					<li>Inganni</li>
-					<li>Bisceglie</li>
+					<li class="trainStop stopRect">Wagner</li>
+					<li class="trainStop stopRect">De Angeli</li>
+					<li class="trainStop stopRect">Gambara</li>
+					<li class="trainStop stopRect">Bande Nere</li>
+					<li class="trainStop stopRect">Primaticcio</li>
+					<li class="trainStop stopRect">Inganni</li>
+					<li class="terminal stopCirle">Bisceglie</li>
 				</ul>
 			</li>
 		</ul>
 		
 		
 		
-		<ul class="greenline">
+		<ul id="greenline">
 			
 		</ul>
-		<ul class="yellowline">
+		<ul id="yellowline">
 			
 		</ul>
-		<ul class="lillaline">
+		<ul id="lillaline">
 			
 		</ul>
 	</section>
