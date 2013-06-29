@@ -58,7 +58,7 @@
 		
 		/* Singole fermate + orientamenti */
 		li{position:absolute;text-transform: uppercase;font-size: 20px;letter-spacing: -1px;white-space: nowrap;word-spacing: 2px;color:black;}
-			li:after{content:'';position:absolute;height:17px;width:100px;}
+			li:after{content:'';position:absolute;height:16px;width:100px;}
 				/*li#portaVenezia:after{width:50px}*/
 				ul#redline li:after{background-color:#c31a1f;}
 				ul#greenline li:after{background-color:#77932c;}
@@ -78,8 +78,8 @@
 			li.horizontal.stopRect:before{}
 			
 		li.verticalRight{}
-			li.verticalRight:after{-webkit-transform:rotate(90deg);left:-76px;top:100%;}
-			li.verticalRight.stopRect:before{-webkit-transform:rotate(90deg);left:-15px;top:2px;}
+			li.verticalRight:after{-webkit-transform:rotate(90deg) translate3d( 0, 0, 0);-moz-transform:rotate(90deg) translate3d( 0, 0, 0);right:100%;top:100%;}
+			li.verticalRight.stopRect:before{-webkit-transform:rotate(90deg) translate3d( 0, 0, 0);-moz-transform:rotate(90deg) translate3d( 0, 0, 0);left:-13px;top:2px;}
 			li.verticalRight.stopCirle:before{left:-15px;top:2px;}
 			li.verticalRight.stopCircleChange:before{left:-39px;top:24px;z-index:1;}
 			
@@ -94,7 +94,7 @@
 		li.stopCircleChange:before{background-color:white;position:absolute;width:21px;height:21px;border:3px solid black;content:'';border-radius:13px}
 		
 		/* Elemento Rectangle */
-		li.stopRect:before{position:absolute;width:8px;height:15px;content:'';}
+		li.stopRect:before{position:absolute;width:7px;height:14px;content:'';}
 			#redline li.stopRect:before{background-color:#c31a1f;}
 			#greenline li.stopRect:before{background-color:#77932c;}
 			#yellowline li.stopRect:before{background-color:#eab808;}
