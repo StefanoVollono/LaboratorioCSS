@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Layout a colonne responsive :: webdesignerwall.com/</title>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css' />
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		*{margin:0;padding:0}
+		article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+		#pagewrap {width: 978px;max-width: 96%;margin: 0 auto;}
+		.wrapper {overflow: hidden;}
+		h3{margin-bottom:10px;}
+		
+		.col{background: #eee;float: left;margin-left: 3.2%;margin-bottom: 30px;}
+		.fullwidth .col {float: none;margin-left: 0;}
+		
+		/* grid4 col */
+		.grid4 .col {width: 22.6%;}
+		
+		/* grid3 col */
+		.grid3 .col {width: 31.2%;}
+		
+		/* grid2 col */
+		.grid2 .col {width: 48.4%;}
+		
+		/* clear col */
+		.grid4 .col:nth-of-type(4n+1),
+		.grid3 .col:nth-of-type(3n+1),
+		.grid2 .col:nth-of-type(2n+1) {
+			margin-left: 0;
+			clear: left;
+		}
+
+		/* reset cols to 3-column */
+		@media screen and (max-width: 740px) {
+			/* grid4 */
+			.grid4 .col {
+				width: 31.2%;
+			}
+			.grid4 .col:nth-of-type(4n+1) {
+				margin-left: 3.2%;
+				clear: none;
+			}
+			.grid4 .col:nth-of-type(3n+1) {
+				margin-left: 0;
+				clear: left;
+			}
+		}
+		
+		/* reset cols to 2-column */
+		@media screen and (max-width: 600px) {
+			/* grid4 */
+			.grid4 .col {
+				width: 48.4%;
+			}
+			.grid4 .col:nth-of-type(3n+1) {
+				margin-left: 3.2%;
+				clear: none;
+			}
+			.grid4 .col:nth-of-type(2n+1) {
+				margin-left: 0;
+				clear: left;
+			}
+		
+			/* grid3 */
+			.grid3 .col {
+				width: 48.4%;
+			}
+			.grid3 .col:nth-of-type(3n+1) {
+				margin-left: 3.2%;
+				clear: none;
+			}
+			.grid3 .col:nth-of-type(2n+1) {
+				margin-left: 0;
+				clear: left;
+			}
+		}
+		
+		/* reset cols to fullwidth */
+		@media screen and (max-width: 400px) {
+			/* grid4 */
+			.col {
+				width: 100% !important;
+				margin-left: 0 !important;
+				clear: none !important;
+			}
+		}
+	</style>
+	
+	<!--[if lt IE 9]>
+		<script src="http://scottjehl.github.io/Respond/respond.src.js"></script>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Layout a colonne responsive</h1>
+			<p id="description">Di seguito la traduzione dell’articolo "Responsive Column Layouts" di Nick La. L'autore dell'articolo, http://webdesignerwall.com/tutorials/responsive-column-layouts, ci spiega come realizzare un layout a colonne che si adatti sempre bene con tutte le varie risoluzioni.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+			<div id="pagewrap">
+				<h3>Grid4</h3>
+				<div class="wrapper grid4">
+					<article class="col">Column 1</article>		
+					<article class="col">Column 2</article>
+					<article class="col">Column 3</article>
+					<article class="col">Column 4</article>
+					<article class="col">Column 5</article>		
+					<article class="col">Column 6</article>
+					<article class="col">Column 7</article>
+					<article class="col">Column 8</article>
+				</div>
+				
+				<h3>Grid3</h3>
+				<div class="wrapper grid3">
+					<article class="col">Column 1</article>		
+					<article class="col">Column 2</article>
+					<article class="col">Column 3</article>
+					<article class="col">Column 4</article>
+					<article class="col">Column 5</article>		
+					<article class="col">Column 6</article>
+				</div>
+			
+				<h3>Grid2</h3>
+				<div class="wrapper grid2">
+					<article class="col">Column 1</article>		
+					<article class="col">Column 2</article>
+					<article class="col">Column 3</article>
+					<article class="col">Column 4</article>
+				</div>
+			
+				<h3>Fullwidth</h3>
+				<div class="wrapper fullwidth">
+					<article class="col">Column 1</article>
+				</div>
+			</div>	
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
