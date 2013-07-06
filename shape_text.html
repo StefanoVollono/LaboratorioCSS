@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Realizzare forme con i contenuti attraverso i css3 :: Laboratorio CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css' />
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		*{margin:0;padding:0}
+		p{margin:0 auto;}
+		
+		p.triangle{
+			font-size:15px;
+			width:300px;
+			height:300px;
+			overflow:hidden;
+			text-align:justify;
+			-webkit-shape-inside:polygon(0px 0px, 0 300px, 300px 300px);
+			margin-bottom:40px;
+    	}
+    
+    	p.hexagon{
+			font-size:12px;
+			width:300px;
+			height:300px;
+			text-align:justify;
+			-webkit-shape-inside:polygon(75.778px 272.829px, 1.555px 144.271px, 75.778px 15.713px, 224.222px 15.713px, 298.444px 144.271px, 224.222px 272.829px);
+    	}
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Realizzare forme con i contenuti attraverso i css3</h1>
+			<p id="description">Grazie alla proprietà shape-inside vedremo come realizzare delle forme geometriche con i contenuti testuali di una pagina web.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+		
+			<p class="triangle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+			<p class="hexagon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+			
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
