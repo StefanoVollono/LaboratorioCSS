@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<title>Simple Navigation Menu :: Laboratorio CSS</title>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("ul li ul").hover(
+	        function() {
+	            $(this).prevAll().addClass('active');
+	        },
+	        function () {
+	            $(this).prev().removeClass('active');
+	        }
+		);	
+	});	
+</script>
+
+</head>
+
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Categories</a>
+				<ul>
+					<span>
+						<li><a href="#"><span>inspiration</span> <span>451</span></a></li>
+						<li><a href="#"><span>design</span> <span>214</span></a></li>
+						<li><a href="#"><span>freebies</span> <span>56</span></a></li>
+						<li><a href="#"><span>premium files</span> <span>12</span></a></li>
+					</span>
+					<span>
+						<li><a href="#"><span>tutorials</span> <span>451</span></a></li>
+						<li><a href="#"><span>design articles</span> <span>214</span></a></li>
+						<li><a href="#"><span>interviews</span> <span>56</span></a></li>
+						<li><a href="#"><span>other resources</span> <span>12</span></a></li>
+					</span>
+				</ul>
+			</li>
+			<li><a href="#">Archives</a></li>
+			<li><a href="#">Search</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+
+
+</body>
+</html>

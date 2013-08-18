@@ -1,0 +1,46 @@
+/* ==== RESET ====
+Link: http://meyerweb.com/eric/tools/css/reset
+Version: 2.0
+Date: 2011/01/26
+License: Public Domain 
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style:none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+/*table {border-collapse: separate;border-spacing: 0;}*/
+textarea {resize: none;}
+strong {font-weight:bold;}
+a:active, a:focus, input:focus[type=submit]{outline-color:invert; outline-style:none; outline-width:0;}
+
+body{background:url(bgWood.jpg);}
+nav{width:700px; margin:20% auto; text-align:center; font-size:0;}
+nav ul{height:52px; border-radius:5px; border-color:#fff; border-style:solid; border-width:2px 1px 1px;
+background: #dddddd; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2Q1ZDVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGNkY2QiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #dddddd 0%, #d5d5d5 50%, #cdcdcd 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(50%,#d5d5d5), color-stop(100%,#cdcdcd)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #dddddd 0%,#d5d5d5 50%,#cdcdcd 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #dddddd 0%,#d5d5d5 50%,#cdcdcd 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #dddddd 0%,#d5d5d5 50%,#cdcdcd 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #dddddd 0%,#d5d5d5 50%,#cdcdcd 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#cdcdcd',GradientType=0 ); /* IE6-8 */
+}
+nav li{display:inline-block; *display:inline; *zoom:1; margin-top:-2px; position:relative;}
+nav li a{font-size:13px; font-family:Arial; text-transform:uppercase; text-decoration:none; color:#666; text-shadow:0 1px 0 #FFF; display:inline-block; *display:inline; *zoom:1; padding:20px 25px; border-style:solid; border-width:2px 1px 0 1px; border-color:transparent #fff transparent #b1b1b1;}
+nav li a:hover, a.active{color:#fff; text-shadow:none; background:#2b2b2b; border-color:#3f3f3f transparent transparent;}
+nav li:first-child a{border-left:none;}
+nav li:last-child a{border-right:none;}
+
+nav li ul{width:350px; height:auto; display:none; filter:none; background:#2b2b2b; position:absolute; top:55px; left:0; border-radius:0; border:none; padding:20px 15px 10px; -webkit-box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.5); -moz-box-shadow:0px 2px 3px rgba(50, 50, 50, 0.5); box-shadow:0px 2px 3px rgba(50, 50, 50, 0.5);}
+nav li:hover ul{display:block;}
+nav li ul span{width:50%; float:left;}
+nav li ul li{display:block; border-bottom:1px solid #333; margin-bottom:10px; padding-bottom:5px; margin-right:15px; *height:13px;}
+nav li ul span:last-child li{margin-right:0;}
+nav li ul li a{font-size:11px; border:none; text-shadow:none; text-transform:none; padding:0; font-weight:normal; line-height:normal; position:relative; text-align:left; width:100%;}
+nav li ul li a:hover{border:none; color:#FFF; background:none;}
+nav li ul li a span{position:absolute; top:-2px; right:0; width:auto; background:#3f3f3f; padding:3px; border-radius:3px; font-size:9px;}
+nav li ul li a span:first-child{position:static; margin-right:30px; background:none; font-size:inherit; padding:0;}
