@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Firefox e il bug del text-overflow:ellipsis :: Laboratorio CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css' />
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		*{margin:0;padding:0}
+		body{font-family:Arial, sans-serif; padding:20px; text-align:center;}	
+		#content a, #content input{font-size:13px; color:#fff; text-transform:uppercase; text-decoration:none; display:inline-block; padding:5px; border-radius:5px; background:#81c812; margin-right:10px; border:none; cursor:pointer;}
+		
+		input::-moz-focus-inner{margin-top:-1px; margin-bottom:-1px;} 
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Fix altezza input su Firefox</h1>
+			<p id="description">Affiancando due pulsanti, un'ancora e uno di tipo submit, noteremo che il campo input risulta leggermente più alto dell'elemento a. Ecco come risolverlo.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+		
+			<a href="#">Elemento a</a>
+			<input type="button" value="Campo Input" />
+			<a href="#">Elemento a</a>
+			
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
