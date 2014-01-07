@@ -1,0 +1,329 @@
+
+/*
+	Tutorial provided by Giacomo Freddi 
+	03/01/2014 - http://www.laboratoriocss.it
+	Giacomo Freddi - Http://www.upcreative.net
+*/
+
+/******************* stili generali della pagina **********************/
+
+body, html{
+	height: 100%;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 100;
+	overflow: hidden;
+	background-color: #FFF;
+	color: #222;
+	
+	/* disabilita certi tipi di interazioni sui dispositivi mobili (come l'highlight al click degli elementi) */
+	 -webkit-touch-callout: none; 
+	 -webkit-text-size-adjust: none; 
+	 -webkit-user-select: none; 
+	 -webkit-highlight: none; 
+	 -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+h1{
+	color:#FFFFFF;
+	font-weight: 100;
+	text-align: center;
+}
+
+a {
+  color: #0882f0;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Rimuove la outline scura sul touch dei link */
+}
+
+
+	/* la barra di navigazione viene impostata in cima al documento per visualizzare il titolo della pagina e il pulsante  */
+	nav {
+	  height: 44px;  	  
+	  background-color: #F0F0F0;	  
+	  position: relative; 
+	  border-bottom: 1px solid #B9B9B9;
+	  z-index: 0;
+	  color:#606060; 
+	  
+	  /* 
+        aggiungiamo impostano la transition sulla proprietà transform 
+		(sfrutta hardware acceleratione e layer grafici)        
+       */
+    
+      -webkit-transition: -webkit-transform .5s ease, opacity .5s ease;
+	  -moz-transition: -moz-transform .5s ease, opacity .5s ease;
+	  -ms-transition: -ms-transform .5s ease, opacity .5s ease;
+	  -o-transition: -o-transform .5s ease, opacity .5s ease;
+	  transition: transform .5s ease, opacity .5s ease;
+	}
+	
+	/* Il titolo viene centrato nella barra di navigazione */
+	nav .title {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  display: block;
+	  margin:0;
+	  width: 100%;
+	  font-size: 18px;
+	  font-weight: 100;
+	  line-height: 44px;
+	  color: #555555;
+	  text-align: center;
+	  white-space: nowrap;
+	  
+	  z-index: 1;
+	}
+	
+	/*stili dei pulsanti della navbar*/
+	
+	/* Generic style for all buttons in .bar-title */
+	nav button, nav a{	  
+	
+	  position: absolute;
+	  top: 5px;
+	  left: 5px;
+	
+	  /* impostaiamo lo z-index per visualizzare i pulsanti sopra l'elemento del title */
+	  z-index: 2; 
+	  
+	  /*impostiamo uno stile flat*/
+	  border-radius:4px;
+	  padding:6px 8px;
+	  border:none;	
+	  color: #606060;
+	  background: transparent;
+	  text-decoration: none;	  
+	}
+	
+	nav .title + button,
+	nav .title + a{
+      /* allineamo a destra tramite posizionamento assoluto il pulsante che viene subito dopo il titolo della navbar */	  
+      left: auto;
+	  right: 5px;	
+	  color:#CB3330;  
+	}
+	nav .title + button:active,
+	nav .title + a:active{
+		color: #F4F4F4;
+	}
+	
+	@media (max-width:400px){
+	    nav .title{		    
+		    display: none;
+	    }	  
+    }
+	
+	
+/******************* stili dell'esempio e dell'animazione del searchbox **********************/
+
+	.search-wrapper{
+        top:45px;
+        height:45px;
+        position:absolute;
+        width:100%;
+
+        /* 
+	        aggiungiamo impostano la transition sulla proprietà transform 
+			(sfrutta hardware acceleratione e layer grafici)        
+        */
+        
+        -webkit-transition: -webkit-transform .5s ease;
+        -moz-transition: -moz-transform .5s ease;
+        -ms-transition: -ms-transform .5s ease;
+        -o-transition: -o-transform .5s ease;
+        transition: transform .5s ease;
+    }
+    	
+    /*stili per l'input*/
+    .search-wrapper input{
+        height:45px;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        border:0;
+        border-top:1px solid #FFF;
+        border-bottom:1px solid #D9D9D9;
+        
+        /* 
+	        serve a rimuovere gli stili di defualt che webkit atribuisce 
+	        agli input con type='search' nei dispostivi mobili 
+        */
+        -webkit-appearance:none;
+                
+        /* 
+        impostiamo il padding di sinistra e di destra a 30px 
+        in modo da lasciare lo sopazio alle icone durante il typing
+        */
+        
+        padding:6px 30px;
+        background: #FFF;
+        display:block;
+        width:100%;
+        outline:0;
+    }
+    
+    /* 
+    impostiamo le due icone (lente e rimuovi) in modo assoluto, 
+    una all'inizio e d una alla fine del campo di testo
+    */
+    
+    .search-wrapper i{
+        position:absolute;
+        top:10px;
+        font-size: 20px;
+    }
+    .search-wrapper i[class*='search']{
+        left:6px;
+        color:#CCC;
+        cursor:default;
+    }
+    .search-wrapper i[class*='times']{
+        top:0;
+        right:0;
+        color:#AAA;
+        cursor:pointer;
+        font-size: 22px; 
+        padding:11px;  
+        
+             
+        
+        /* 
+        	inizialmente  l'icona di annuallamento inserimento non deve essere visibile 
+        	per cui impostiamo la sua opacity a 0 e settiamo l'animazione su questa proprietà
+        	(sfrutta hardware acceleratione e layer grafici)
+            
+        */
+        opacity:0;
+        
+        -webkit-transition: opacity .5s ease;
+        -moz-transition: opacity .5s ease;
+        -ms-transition: opacity .5s ease;
+        -o-transition: opacity .5s ease;
+        transition: opacity .5s ease;
+    }
+    
+     /* 
+     	stili per il contenitore della lista, anche questo viene posizionato in modo assoluto	     
+     */
+     
+     article{
+        position:absolute;
+        top:90px;
+        height:auto;
+        width:100%;
+        bottom:0;
+        font-size: 12px;
+        
+        overflow: auto;
+        
+        /*aniamzione sul transform (sfrutta hardware acceleratione e layer grafici)*/
+        
+        -webkit-transition: -webkit-transform .5s ease;
+        -moz-transition: -moz-transform .5s ease;
+        -ms-transition: -ms-transform .5s ease;
+        -o-transition: -o-transform .5s ease;
+        transition: transform .5s ease;
+        
+    }
+    
+    /*impostiamo la modalità di scrolling per i dispositivi mobile*/
+    @media (max-width:400px){
+	    article{		    
+		    -webkit-overflow-scrolling: touch;
+	    }	    
+	    /* 
+	       Hack per forzare il render per gli elementi posizionati in modo assoluto e relativo durante lo scrolling
+		   Si tratta di un Hack per un bug sulla proprietà "-webkit-overflow-scrolling: touch" 
+		*/
+		article > * {
+		  -webkit-transform: translateZ(0px);
+		          transform: translateZ(0px);
+		}
+    }
+    
+    
+    
+    /***** stili della lista ******/
+    
+	.list {
+	  margin:0;
+	  margin-bottom: 10px;
+	  list-style: none;
+	  background-color: #fff;
+	  
+	}
+	.list li {
+	  position: relative;
+	  padding: 11px 60px 11px 10px; 
+	  border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+		
+	.list li > a{
+	  position: relative;
+	  display: block;
+	  padding: inherit;
+	  margin: -11px -60px -11px -10px;
+	  color: inherit;
+	}
+	
+	/* posizioniamo l'icona della freccia  */
+	.list i{
+	  position: absolute;
+	  top: 50%;
+	  right: 10px;
+	  margin-top: -5px;
+	}
+    
+    
+    /************** stili attribuiti sul focus dell'input, che avviano le animazioni ****************/
+    
+    /*al focus sull'input trsasliamo la navbar di -45px sull'asse delle Y e la impostiamo con opacity 0*/
+    .search-focus nav{
+	    opacity: 0;
+	    -webkit-transform: translateY(-45px);
+        -moz-transform: translateY(-45px);
+        -ms-transform: translateY(-45px);
+        -o-transform: translateY(-45px);
+        transform: translateY(-45px);
+    }
+    
+    .search-focus .search-wrapper,
+    .search-focus article{
+    
+    	/*trasliamo il contenitore della lista di -45px (pari all'altezza della nav bar) sull'asse delle Y */
+        -webkit-transform: translateY(-45px);
+        -moz-transform: translateY(-45px);
+        -ms-transform: translateY(-45px);
+        -o-transform: translateY(-45px);
+        transform: translateY(-45px);
+    }
+    .search-focus .search-wrapper i[class*='times']{
+        /*
+        	rendiamo visibile il pulsante di rimozione del contenuto dell'input
+        */
+        opacity:1;
+    }
+    
+    /* appena viene avviata l'animazione nascondiamo la classe helper*/
+    .search-focus .helper{
+        display: none;
+    }    
+
+    .search-focus article{
+        /*
+	        impostiamo la fine del contenitore della lista a -45px 
+	        per fare in modo che rimanga in fondo alla finestra 
+	        (visto che lo abbiamo traslato di -45px sull'asse delle Y per coprire la navbar)
+        */
+        bottom:-45px;
+    }        
+    
+    
+    
+    
+
+
+
+
+
+	
