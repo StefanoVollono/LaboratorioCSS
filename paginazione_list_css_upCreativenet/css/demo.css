@@ -1,0 +1,211 @@
+
+/*
+	Tutorial provided by upCreative 
+	10/12/2013 - Giacomo Freddi - Http://www.upcreative.net
+*/
+
+body, html{
+	height: 100%;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 100;
+	overflow: hidden;
+}
+
+article > div:first-child{
+	text-align: center;
+	margin-bottom:10px;
+	}
+	article > div a{
+		padding:10px 12px;
+		font-size: 1.2em;
+		display: inline-block;
+		text-decoration: none;
+		color: #FFF;		
+		border:1px solid #325483;		
+		background: #3E69A4;		
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+	}
+	article > div a:hover{
+		background: #3B5C87;
+	}
+
+/*barra di navigazione*/
+
+	/* la barra di navigazione viene impostata in cima al documento per visualizzare il titolo della pagina e il pulsante  */
+	nav {
+	  top: 0;
+	  height: 44px;
+	  padding:0;	  	  
+	  background-color: #3E69A4;
+	  border-bottom: 1px solid #325483;	  	  
+	  position: relative;  
+	}
+	
+	/* Il titolo viene centrato nella barra di navigazione */
+	nav .title {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  display: block;
+	  margin:0;
+	  width: 100%;
+	  font-size: 18px;
+	  font-weight: 100;
+	  line-height: 44px;
+	  color: #F4F4F4;
+	  text-align: center;
+	  white-space: nowrap;
+	}
+	
+	/*stili dei pulsanti della navbar*/
+	
+	/* Generic style for all buttons in .bar-title */
+	nav button {	  
+	
+	  position: absolute;
+	  top: 5px;
+	  left: 5px;
+	
+	  /* impostaiamo lo z-index per visualizzare i pulsanti sopra l'elemento del title */
+	  z-index: 10; 
+	  
+	  /*impostiamo uno stile flat*/
+	  border-radius:4px;
+	  padding:6px 8px;
+	  border:none;	
+	  color: #FFF;
+	  background: transparent;
+	  
+	}
+	
+	nav .title + button {
+      /* allineamo a destra tramite posizionamento assoluto il pulsante che viene subito dopo il titolo della navbar */	  
+      left: auto;
+	  right: 5px;	  
+	}
+	nav .title + button:active{
+		color: #F4F4F4;
+	}
+	
+/* stili del corpo della pagina */
+	
+	article {
+	  position: fixed;
+	  top: 45px;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  overflow: auto;
+	  background: #37485D;
+	  padding-top:20px;
+	  
+	  /*per abilitare lo scrolling nativo sui mobile webkit browsers*/	  
+	  -webkit-transition-property: top, bottom;
+	          transition-property: top, bottom;
+	  -webkit-transition-duration: .2s, .2s;
+	          transition-duration: .2s, .2s;
+	  -webkit-transition-timing-function: linear, linear;
+	          transition-timing-function: linear, linear;
+	  -webkit-overflow-scrolling: touch;
+	  
+	}
+	
+	/* hack per mantenere il rendering durante lo scrolling di tutti gli elementi posizionati in modo assoculto e relativo */
+	article > * {
+	  -webkit-transform: translateZ(0px);
+	          transform: translateZ(0px);
+	}
+	
+/* stili dell'ul rappresentante ogni pagina */
+
+	.page {
+	   list-style: none;
+	   margin: 0;
+	   padding: 0;
+	   border-top: solid 1px #c8c8c8;
+	   border-bottom: solid 1px #c8c8c8;
+	   background-color: #fff;
+	   overflow: hidden;
+	   overflow-y: auto;
+	   
+	   /* stili per il posizionamento */
+	   position: absolute;
+	   top:100px;
+	   bottom:0;
+	   width: 100%;
+	   
+	   
+	}
+	
+	/* 
+		stili per le pagine prima delle animazioni di entrata, 'nascoste' fuori dallo schermo,
+		a sinistra nel caso  della classe prev, a destra nel caso della classe next
+	*/
+	
+	.page.prev{
+		-webkit-transform: translateX(-110%);
+		-moz-transform: translateX(-110%);
+		-o-transform: translateX(-110%);
+		transform: translateX(-110%);
+	}
+	.page.next{
+		-webkit-transform: translateX(-110%);
+		-moz-transform: translateX(-110%);
+		-o-transform: translateX(-110%);
+		transform: translateX(-110%);
+	}
+	
+	.page > li {
+	   padding: 13px 15px 13px 15px;
+	   -webkit-transition: all .3s ease-out;
+	   -moz-transition: all .3s ease-out;
+	   transition: all .3s ease-out;
+	   position: relative;
+	   background-color: #fff;
+	   font-size: 12pt;
+	}
+	.page img{
+		float:left;
+		margin: 0 10px 10px 0;
+	}
+	.page h3,
+	.page h4,
+	.page p{
+		font-size: 0.9em;
+		margin:5px 0;
+	}
+		
+	.page > li::before {
+	   content: '';
+	   display: block;
+	   position: absolute;
+	   bottom: 0px;
+	   left: 15px;
+	   right: 0px;
+	   border-bottom: solid 1px #c8c8c8;
+	}
+	
+	/* simbolo info */
+	
+	.page > li.show-detail::after {
+	   content: 'i';
+	   display: block;
+	   height: 20px;
+	   width: 22px;
+	   border-radius: 20px;
+	   border: solid 1px #007aff;
+	   color: #007aff;
+	   font: bold 14px/0 'Times', serif;
+	   -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	   box-sizing: border-box;
+	   padding: 10px 8px;
+	   position: absolute;
+	   top: 10px;
+	   right: 15px;
+	}	
+
+
+
+	

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial CSS3 - Come creare una paginazione su lista con i CSS3 e Modernizr">
+    <meta name="author" content="css3, stili, iOS7, html5, paginazione, html mobile app">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>HTML Mobile App tutorial: paginazione su lista con i CSS3 e Modernizr</title>
+
+    <!-- Reset degli elementi del documento con Normalize CSS -->
+    <link href="css/normalize.css" rel="stylesheet">
+    
+    <!-- stili per le icone font-awesome (direttamente dal link CDN) http://fontawesome.io -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- stili animate.css per le animazioni della paginazione. Credits: https://daneden.me/animate/	-->
+    <link href="css/animate-custom.css" rel="stylesheet">
+    
+    <link href="css/demo.css" rel="stylesheet">
+    
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-43882772-1', 'upcreative.net');
+	  ga('send', 'pageview');
+	
+	</script>
+    
+  </head>
+
+  <body>
+	  
+	<nav>
+		<button rel="prev"><i class="fa fa-chevron-left"></i> Indietro</button>
+		<h1 class="title">HTML Mobile App</h1>
+		<button rel="next">Avanti <i class="fa fa-chevron-right"></i></button>
+	</nav>
+	<article>
+		
+		<div>		
+			<a href="http://www.upcreative.net/html-mobile-app-animazione-css3-su-pagine/">Vai all'articolo su upCreative.net</a>		
+		</div>
+		
+		
+		<ul class='page animated'>
+			<li class="show-detail">
+				<img src="img/1.jpg" height="80px">
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/2.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/3.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/4.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<img src="img/1.jpg" height="80px">
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/2.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/3.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/4.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<img src="img/1.jpg" height="80px">
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/2.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+		</ul>
+		
+	</article>
+
+
+    <!-- Includo gli scripts in fondo alla pagina per velocizzarne il caricamento -->
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" >
+    
+    	/* Grazie a modernizr riprendo il nome dell'evento di fine animazione, che cambia a seconda del browser */
+    	
+    	var endAnimationName = {
+			'WebkitAnimation' : 'webkitAnimationEnd',
+			'OAnimation' : 'oAnimationEnd',
+			'msAnimation' : 'MSAnimationEnd',
+			'animation' : 'animationend'
+		};
+		var animationName = endAnimationName[ Modernizr.prefixed( 'animation' ) ];
+    
+	    $(function(){
+	    	
+	       //variabile globale per controllare se un'animazione è in corso o meno
+	       var animating = false;
+	    
+		   //bind dell'evento click sui pulsanti di paginazione 
+		   $("nav button").on("click", function(){
+		   		
+		   	   /* 
+		   	   	siccome non vogliamo che più animazioni vengano eseguite contemporanemante,
+		   	   	annulliamo l'animazione se un 'altra è in corso. Con questa tecnica 
+		   	   	evitiamo per esempio l'avvio di due animazioni se l'utente effettua un 
+		   	   	doppio click sul pulsante
+		   	    */
+		   	   if(animating)
+		   	   		return false;
+		   
+		   	   /*
+		   	   riprendiamo come prima cosa il tipo di 
+		   	   button (next o prev) attraverso l'attributo 'rel'
+		   	   */
+			   var mode = $(this).attr("rel");
+			   
+			   /*
+			   cloniamo l'elemnto della lista; questa azione, in un contesto reale,
+			   andrebbe sostituita con la generazione di una lista a dopo 
+			   un'eventuale chiamata ajax per reperire i dati o qualunque altro
+			   sistema per ottenere idati della pagina successiva o precedente 
+			   */			   
+			   var newPage = $("ul.page").clone();
+			   
+			   /*
+			   	una volta generato l'elemento della lista, aggiungiamo la classe next o prev, 
+			   	a seconda button premuto; questa classe determinerà la posizione della pagina 
+			   	prima dell'animazione (fuori dello schermo, a sinistra o a destra).
+			   */
+			   newPage.addClass(mode)
+			   
+			   //aggiungiamo l'elemento DOM al documento, all'interno del tag article
+			   $("article").append(newPage);
+			   
+			   /*
+			   a seconda del tipo di button premuto aggiungiamo la classe 
+			   di entrata da destra o sinista, che avvia l'animazione
+			   */
+			   animating = true; //l'animazione ha inizio
+			   newPage.addClass(mode=="next"?"slideInRight":"slideInLeft");
+			   /*
+   		   	   gestiamo l'evento di fine animazione in modo da resettare la variabile 'animating'
+   		   	   e rimuovere l'elemento precedente dal documento, per alleggerire il markup 
+   		   	   (utile nei dispositivi mobile)
+   		   	   rimuoviamo inoltre le classi 'next' o 'prev' e 'slideInRight' o 'slideInLeft' dall'elemento
+			   */			
+			    
+			   newPage.one(animationName, function(){
+				   animating = false;
+				   $("ul.page").not(newPage).remove();
+				   newPage.removeClass("next prev slideInRight slideInLeft");
+			   });
+			   
+		   });
+	    });
+    </script>
+  </body>
+</html>
