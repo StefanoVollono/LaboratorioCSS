@@ -11,19 +11,19 @@
 		
 		select{appearance:none !important; line-height:20px; width:150px; padding:5px; border:none; background:url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-20.png) no-repeat right 30px center}
 		
-		select.chrome{
+		select{
 			-webkit-appearance:none; 
 		}
 		
 		/* Questo trick non fa visualizzare la freccia su IE 10 */
-		select.ie::-ms-expand {
+		select::-ms-expand {
 			display: none;
 		}
 		
 		/* CSS condizionale per Firefox */
 		@-moz-document url-prefix() {
-		  #all{width:150px; overflow:hidden;}
-		  #all select{width:120%; -moz-appearance:none;}
+		  #contentSelect{width:150px; overflow:hidden;}
+		  #contentSelect select{width:120%; -moz-appearance:none;}
 		}
 		
 	</style>
@@ -32,8 +32,8 @@
 
 	<style type="text/css">
 
-		#all{width:150px; overflow:hidden;}
-		#all select{width:120%;}
+		#contentSelect{width:150px; overflow:hidden;}
+		#contentSelect select{width:120%;}
 
 	</style>
 
@@ -50,24 +50,7 @@
 		</div>
 		<div id="content">
 		
-			<p>Chrome</p>			
-			<select class="chrome">
-				<option>Lista</option>
-				<option>Lista</option>
-				<option>Lista</option>
-				<option>Lista</option>
-			</select>
-			
-			<p>Internet Explorer 10</p>			
-			<select class="ie">
-				<option>Lista</option>
-				<option>Lista</option>
-				<option>Lista</option>
-				<option>Lista</option>
-			</select>
-			
-			<div id="all">	
-				<p>Compatibile con tutti i browser</p>			
+			<div id="contentSelect">	
 				<select>
 					<option>Lista</option>
 					<option>Lista</option>
