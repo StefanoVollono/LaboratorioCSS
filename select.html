@@ -11,19 +11,20 @@
 		
 		select{appearance:none !important; line-height:20px; width:150px; padding:5px; border:none; background:url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-20.png) no-repeat right 30px center}
 		
+		/* Questo trick non fa visualizzare la freccia su Chrome. */
 		select{
 			-webkit-appearance:none; 
 		}
 		
-		/* Questo trick non fa visualizzare la freccia su IE 10 */
+		/* Questo trick non fa visualizzare la freccia su IE 10. */
 		select::-ms-expand {
 			display: none;
 		}
 		
-		/* CSS condizionale per Firefox */
+		/* CSS condizionale per Firefox, soluzione compatibile con tutti i browser. */
 		@-moz-document url-prefix() {
 		  #contentSelect{width:150px; overflow:hidden;}
-		  #contentSelect select{width:120%; -moz-appearance:none;}
+		  select{width:120%; -moz-appearance:none;}
 		}
 		
 	</style>
@@ -33,7 +34,7 @@
 	<style type="text/css">
 
 		#contentSelect{width:150px; overflow:hidden;}
-		#contentSelect select{width:120%;}
+		select{width:120%;}
 
 	</style>
 
