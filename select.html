@@ -20,8 +20,8 @@
 		
 		/* CSS condizionale per Firefox */
 		@-moz-document url-prefix() {
-		  #content{width:150px; overflow:hidden;}
-		  select.all{width:120%; -moz-appearance:none;}
+		  #contentAll{width:150px; overflow:hidden;}
+		  #contentAll select{width:120%; -moz-appearance:none;}
 		}
 		
 	</style>
@@ -30,8 +30,8 @@
 
 	<style type="text/css">
 
-		#content{width:150px; overflow:hidden;}
-		select.all{width:120%;}
+		#contentAll{width:150px; overflow:hidden;}
+		#contentAll select{width:120%;}
 
 	</style>
 
@@ -64,14 +64,15 @@
 				<option>Lista</option>
 			</select>
 				
-			<p>Compatibile con tutti i browser</p>			
-			<select class="all">
-				<option>Lista</option>
-				<option>Lista</option>
-				<option>Lista</option>
-				<option>Lista</option>
-			</select>
-			
+			<div id="all">
+				<p>Compatibile con tutti i browser</p>			
+				<select class="all">
+					<option>Lista</option>
+					<option>Lista</option>
+					<option>Lista</option>
+					<option>Lista</option>
+				</select>
+			</div>
 			
 		</div>
 	</div>
