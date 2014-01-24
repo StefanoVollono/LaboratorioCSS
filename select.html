@@ -7,8 +7,6 @@
 	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 		
-		#content{margin:0 auto;}
-		
 		select{appearance:none !important; line-height:20px; width:150px; padding:5px; border:none; background:url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-20.png) no-repeat right 30px center}
 		
 		select.chrome{
@@ -22,8 +20,8 @@
 		
 		/* CSS condizionale per Firefox */
 		@-moz-document url-prefix() {
-		  #all{width:150px; overflow:hidden;}
-		  #all select{width:120%; -moz-appearance:none;}
+		  #content{width:150px; overflow:hidden;}
+		  select.all{width:120%; -moz-appearance:none;}
 		}
 		
 	</style>
@@ -32,8 +30,8 @@
 
 	<style type="text/css">
 
-		#all{width:150px; overflow:hidden;}
-		#all select{width:120%;}
+		#content{width:150px; overflow:hidden;}
+		select.all{width:120%;}
 
 	</style>
 
@@ -65,16 +63,15 @@
 				<option>Lista</option>
 				<option>Lista</option>
 			</select>
+				
+			<p>Compatibile con tutti i browser</p>			
+			<select class="all">
+				<option>Lista</option>
+				<option>Lista</option>
+				<option>Lista</option>
+				<option>Lista</option>
+			</select>
 			
-			<div id="all">	
-				<p>Compatibile con tutti i browser</p>			
-				<select>
-					<option>Lista</option>
-					<option>Lista</option>
-					<option>Lista</option>
-					<option>Lista</option>
-				</select>
-			</div>
 			
 		</div>
 	</div>
