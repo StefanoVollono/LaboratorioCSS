@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Creare ombre responsive :: Laboratorio CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css' />
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		
+		*{margin:0;padding:0}
+		
+		.box{position:relative; padding:10px; border:1px solid #ccc; margin:20px 20px 70px; background-color:#fff;}
+	
+		.box1:after{content:""; position:absolute; left:0; right:0; bottom:-37px; height:37px; background:url(shadow.png) no-repeat; background-size:100% 100%;}
+	
+		.box2:after{content:""; position:absolute; left:10px; right:10px; bottom:0px; height:20px; border-radius:0 0 50% 50% / 0 0 20px 20px; box-shadow:0 10px 10px rgba(0, 0, 0, 0.5); z-index:-1}
+
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Creare ombre responsive</h1>
+			<p id="description">Questa proprietà consente di effettuare delle vere e proprie espressioni matematiche utilizzando addizione, sottrazione, moltiplicazione e divisione come valore dei componenti.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+			<div class="box box1">
+			  <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.</p>
+			</div>
+			
+			<div class="box box2">
+			  <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.</p>
+			</div>
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
