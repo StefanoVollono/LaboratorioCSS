@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Gestire gli stati delle animazioni con animation-play-state :: Laboratorio CSS</title>
+<style type="text/css">
+
+*{padding:0; margin:0;}
+
+body{background-color:#000;}
+
+@-webkit-keyframes picture{
+	0%{background-position:top left, center left;}
+	100%{background-position:top left, center right;}
+}
+
+#glasslandscape{width:799px; height:500px; position:absolute; top:50%; left:50%; margin-left:-400px; margin-top:-250px; background:url(binocolo.png) no-repeat, url(landscape.jpg) no-repeat; -webkit-animation:picture 10s linear alternate infinite; -webkit-animation-play-state:paused;}
+
+#glasslandscape:hover{-webkit-animation-play-state:running;}
+
+</style>
+
+</head>
+
+<body>
+
+<span id="glasslandscape"></span>
+
+</body>
+</html>
