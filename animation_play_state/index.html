@@ -14,9 +14,14 @@ body{background-color:#000;}
 	100%{background-position:top left, center right;}
 }
 
-#glasslandscape{width:799px; height:500px; position:absolute; top:50%; left:50%; margin-left:-400px; margin-top:-250px; background:url(binocolo.png) no-repeat, url(landscape.jpg) no-repeat; -webkit-animation:picture 10s linear alternate infinite; -webkit-animation-play-state:paused;}
+@keyframes picture{
+	0%{background-position:top left, center left;}
+	100%{background-position:top left, center right;}
+}
 
-#glasslandscape:hover{-webkit-animation-play-state:running;}
+#glasslandscape{width:799px; height:500px; position:absolute; top:50%; left:50%; margin-left:-400px; margin-top:-250px; background:url(binocolo.png) no-repeat, url(landscape.jpg) no-repeat; -webkit-animation:picture 10s linear alternate infinite; -webkit-animation-play-state:paused; animation:picture 10s linear alternate infinite; animation-play-state:paused;}
+
+#glasslandscape:hover{-webkit-animation-play-state:running; animation-play-state:running;}
 
 </style>
 
