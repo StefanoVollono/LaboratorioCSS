@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial CSS3 - Come creare un effetto overlay blur stile iOS7">
+    <meta name="author" content="css3, stili, iOS7, html5, blur effect">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Creare un effetto overlay blur stile iOS7</title>
+
+    <!-- Reset degli elementi del documento con Normalize CSS -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/demo.css" rel="stylesheet">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43882772-1', 'upcreative.net');
+  ga('send', 'pageview');
+
+</script>
+    
+  </head>
+
+  <body>
+	  
+	<nav>
+		<h1 class="title">Overlay Blur effect</h1>
+		<button class="open-overlay">Show</a>
+	</nav>
+	<article>
+		
+		<div>		
+			<a href="http://www.upcreative.net/css3-tutorial-creare-effetto-overlay-ios-7-blur/">Vai all'articolo su upCreative.net</a>		
+		</div>
+		
+		<ul class='list'>
+			<li class="show-detail">
+				<img src="img/1.jpg" height="80px">
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/2.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/3.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+			<li class="show-detail">
+				<aside>
+					<img src="img/4.jpg" height="80px">
+				</aside>
+				<div>
+					<h3>Lorem ipsum</h3>
+					<h4>Radioactive</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</li>
+		</ul>
+		
+	</article>
+	<section class="overlay">
+		
+		<button class="close-overlay">Hide</a>
+		
+	</section>
+
+
+    <!-- Includo gli scripts in fondo alla pagina per velocizzarne il caricamento -->
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" >
+    
+    	/* Grazie a modernizr riprendo il nome dell'evento di fine animazione, che cambia a seconda del browser */
+    	
+    	var endAnimationName = {
+			'WebkitAnimation' : 'webkitAnimationEnd',
+			'OAnimation' : 'oAnimationEnd',
+			'msAnimation' : 'MSAnimationEnd',
+			'animation' : 'animationend'
+		};
+		var animationName = endAnimationName[ Modernizr.prefixed( 'animation' ) ];
+    
+	    $(function(){
+		   //bind dell'evento click sul pulsante di attivazione 
+		   $("button.open-overlay").on("click", function(){
+			   $("body").addClass("open-overlay");
+		   });
+		   $("button.close-overlay").on("click", function(){
+			   $("body").addClass("close-overlay").on(animationName, function(){				   
+				   $(this).off(animationName)
+				   .removeClass("open-overlay close-overlay");
+			   });
+		   });
+	    });
+    </script>
+  </body>
+</html>

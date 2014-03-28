@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gestire le animazioni dopo l’esecuzione con animation-fill-mode :: Laboratorio CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css' />
+	<link href="common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		*{margin:0;padding:0}
+		h2, p{text-align: center;}
+		h2{margin-top:30px;}
+		#content p{color:green;}
+		
+		@-webkit-keyframes fontSize{
+  			0%{ font-size:0}
+  			100%{font-size:50px;}
+		}
+		
+		@keyframes fontSize{
+  			0%{ font-size:0}
+ 	 		100%{font-size:50px;}
+		}
+
+		p.forwards{
+		  -webkit-animation-name:fontSize;
+		  -webkit-animation-duration:3s;
+		  -webkit-animation-fill-mode:forwards;
+		  
+		  animation-name:fontSize;
+		  animation-duration:3s;
+		  animation-fill-mode:forwards;
+		}
+
+		p.backwards{
+		  -webkit-animation-name:fontSize;
+		  -webkit-animation-duration:3s;
+		  -webkit-animation-delay:2s;
+		  -webkit-animation-fill-mode:backwards;
+		  
+		  animation-name:fontSize;
+		  animation-duration:3s;
+		  animation-delay:2s;
+		  animation-fill-mode:backwards;
+		}
+
+		p.both{
+		  -webkit-animation-name:fontSize;
+		  -webkit-animation-duration:3s;
+		  -webkit-animation-delay:2s;
+		  -webkit-animation-fill-mode:both;
+		  
+		  animation-name:fontSize;
+		  animation-duration:3s;
+		  animation-delay:2s;
+		  animation-fill-mode:both;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Gestire le animazioni dopo l’esecuzione con animation-fill-mode</h1>
+			<p id="description">Analizziamo la proprietà animation-fill-mode attualmente in fase di bozza da parte del W3C. Vediamo quali valori gli sono attribuiti e che ruolo svolgono.
+ </p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+				
+			<h2>Valore forward</h2>
+			<p class="forwards">Lorem Ipsum Lorem Ipsum</p>
+
+			
+			<h2>Valore backwards</h2>
+			<p class="backwards">Lorem Ipsum Lorem Ipsum</p>
+
+			
+			<h2>Valore both</h2>
+			<p class="both">Lorem Ipsum Lorem Ipsum</p>
+
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
