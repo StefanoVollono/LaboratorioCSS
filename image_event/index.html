@@ -12,7 +12,7 @@
 		#content div{position:relative; float:left;}
 		input{display:none;}
 		label{position:absolute; top:0; bottom:0; left:0; right:0; -moz-user-select:none; cursor:pointer;}
-		div:hover label:after{content:""; width:40px; height:40px; position:absolute; bottom:0; right:0; background:url(zoomin.png) no-repeat center center rgba(255,255,255, 0.9); padding:5px;}
+		#content div:hover label:after{content:""; width:40px; height:40px; position:absolute; bottom:0; right:0; background:url(zoomin.png) no-repeat center center rgba(255,255,255, 0.9); padding:5px;}
 		label + img{width:300px; transition:0.2s ease-in-out 0s;}
 		input[type=checkbox]:checked + label:after{background-image:url(zoomout.png);}
 		input[type=checkbox]:checked ~ img{width:600px;}
