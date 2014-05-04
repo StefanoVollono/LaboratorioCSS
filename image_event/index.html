@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animazioni sprite con il valore steps() :: Laboratorio CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css' />
+	<link href="../common/css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		*{margin:0;padding:0}
+		#content{width:600px; margin:0 auto;}
+		
+		#content div{position:relative; float:left;}
+		input{display:none;}
+		label{position:absolute; top:0; bottom:0; left:0; right:0; -moz-user-select:none; cursor:pointer;}
+		div:hover label:after{content:""; width:40px; height:40px; position:absolute; bottom:0; right:0; background:url(zoomin.png) no-repeat center center rgba(255,255,255, 0.9); padding:5px;}
+		label + img{width:300px; transition:0.2s ease-in-out 0s;}
+		input[type=checkbox]:checked + label:after{background-image:url(zoomout.png);}
+		input[type=checkbox]:checked ~ img{width:600px;}
+	
+	</style>
+</head>
+
+<body>
+	<a id="logo" href="http://www.laboratoriocss.it" title="Laboratorio CSS" class="logo"><img src="../common/img/structure/logoLabcss.png" alt="Logo laboratorio CSS" /></a>
+	<div id="container">
+		<div id="header">
+			<h1>Evento image zoom con CSS</h1>
+			<p id="description">Come ottenere un effetto di image zoom cliccando su un’immagine utilizzando solo css.</p>
+		</div>
+		<div id="content">
+		
+			<!-- ESEMPIO -->
+			<div>
+				<input id="check" type="checkbox" name="check" />
+				<label for="check"></label>
+				<img src="lorem.jpg" alt="nome immagine" />
+			</div>
+			<!-- //ESEMPIO -->
+			
+		</div>
+	</div>
+</body>
+</html>
