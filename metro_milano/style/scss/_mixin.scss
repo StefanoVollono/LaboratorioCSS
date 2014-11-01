@@ -1,0 +1,22 @@
+/* Clear fix */
+@mixin clearfix{
+  // For modern browsers
+  &:before,
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+/* Macro-aree Linee */
+@mixin macroAree($width, $height, $offsetTop, $offsetLeft, $position:absolute){
+    position:$position;
+    width:$width;
+    height:$height; 
+    top:$offsetTop; 
+    left:$offsetLeft;
+}

@@ -3,63 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<title>Rete metropolitana e tratte ferroviarie urbane di Milano</title>
+    <link type="text/css" rel="stylesheet" href="style/css/style.css" />
 	<style type="text/css">
 		
-		/* http://meyerweb.com/eric/tools/css/reset/ 
-		   v2.0 | 20110126
-		   License: none (public domain)
-		*/
-		
-		html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;} 
-		article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
-		body {line-height: 1;}
-		ol, ul {list-style: none;}
-		blockquote, q {quotes: none;}
-		blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
-		table {border-collapse: collapse;border-spacing: 0;}
-
-		
-		/* COMMON */
-		body{background:url("rete.png") no-repeat left top;padding:100px;font-family:Arial;width:3320px;height:2085px;}
 		
 		
-		#railway{position:relative;height:2085px;}
 		
-		/* Colour */
-		.red		{background-color:#c31a1f;}
-		.green	{background-color:#77932c;}
-		.yellow	{background-color:#eab808;}
-		.lilla	{background-color:#9e93bf;}
-		.black	{background-color:#000000;}
-		.blue		{background-color:#05569d;}
-		.azure	{background-color:#0088c5;}
 		
-		/*Suburban Raylways*/
-		.s1			{background-color:#c53330;}
-		.s2			{background-color:#009480;}
-		.s3			{background-color:#970237;}
-		.s4			{background-color:#a2bd30;}
-		.s5			{background-color:#da8d1b;}
-		.s6			{background-color:#e9cd00;}
-		.s8			{background-color:#e5b5b2;}
-		.s9			{background-color:#923c87;}
-		.s11		{background-color:#9d9dc7;}
-		.s13		{background-color:#976c1d;}
-
+		
+		
+		
 		
 		/* Square */
-		.square{border-radius:3px;}
+/*		.square{border-radius:3px;}*/
 		
-		/* Macro-aree Linee */
-		#redline{position: absolute; width: 1398px; height: 1390px; top: 237px; left: 1018px;}
-		#greenline{position: absolute;width: 1237px;height: 1536px;top: 221px;right: 323px;}
-		#yellowline{position: absolute;width: 1117px;height: 1310px;bottom: 313px;right: 492px;}
-		#lillaline{position: absolute;width: 44px;height: 530px;top: 426px;left: 1982px;}
 		
 		/* Singole fermate + orientamenti */
+/*
 		li{position:absolute;text-transform: uppercase;font-size: 20px;letter-spacing: -1px;white-space: nowrap;word-spacing: 2px;color:black;}
 			li:after{content:'';position:absolute;height:16px;width:100px;}
-				/*li#portaVenezia:after{width:50px}*/
+				li#portaVenezia:after{width:50px}
 				ul#redline li:after{background-color:#c31a1f;}
 				ul#greenline li:after{background-color:#77932c;}
 				ul#yellowline li:after{background-color:#eab808;}
@@ -82,9 +45,11 @@
 			li.verticalRight.stopRect:before{-webkit-transform:rotate(90deg) translate3d( 0, 0, 0);-moz-transform:rotate(90deg) translate3d( 0, 0, 0);left:-13px;top:2px;}
 			li.verticalRight.stopCirle:before{left:-15px;top:2px;}
 			li.verticalRight.stopCircleChange:before{left:-39px;top:24px;z-index:1;}
+*/
 			
 		
 		/* Elemento Circle */
+/*
 		li.stopCirle:before{background-color:white;position:absolute;width:25px;height:25px;border:7px solid;content:'';border-radius:19px}
 			#redline li.stopCirle:before{border-color:#c31a1f;}
 			#greenline li.stopCirle:before{border-color:#77932c;}
@@ -92,21 +57,26 @@
 			#lillaline li.stopCirle:before{border-color:#9e93bf;}
 		
 		li.stopCircleChange:before{background-color:white;position:absolute;width:21px;height:21px;border:3px solid black;content:'';border-radius:13px}
+*/
 		
 		/* Elemento Rectangle */
+/*
 		li.stopRect:before{position:absolute;width:7px;height:14px;content:'';}
 			#redline li.stopRect:before{background-color:#c31a1f;}
 			#greenline li.stopRect:before{background-color:#77932c;}
 			#yellowline li.stopRect:before{background-color:#eab808;}
 			#lillaline li.stopRect:before{background-color:#9e93bf;}
+*/
 		
 		/* Capolinea */
+/*
 		li.terminal{font-weight:bold;font-size:27px;border:3px solid;padding:7px;border-radius:10px;letter-spacing:-2px;}
 			li.terminal span{font-weight:normal;text-transform:capitalize;letter-spacing:25px;display:block;}
 			#redline li.terminal{background-color:#f1ccd6;border-color:#c31a1f;}
 			#greenline li.terminal{line-height:29px;background-color:#e8efd9;border-color:#77932c;}
 			#yellowline li.terminal{background-color:#faf1d4;border-color:#eab808;}
 			#lillaline li.terminal{background-color:#ebe9f2;border-color:#9e93bf;}
+*/
 		
 		
 		
@@ -122,10 +92,9 @@
 		
 		
 		
-		#header{height:150px;padding:22px 0 0 220px;position:relative;}
-		#header h1, #header p{color: black;text-transform: uppercase;font-size: 70px;white-space: nowrap;font-family: arial;font-weight: bold;line-height: 60px;letter-spacing: -4px;margin-bottom: 17px;}
-		#header p{font-weight:normal;margin:0;letter-spacing:-6px;}
-		.logo { color: white; font-size: 136px; height: 152px; left: 0; padding: 20px 0 0; position: absolute; text-align: center; top: 0; width: 174px; font-weight: bold; } 		
+/*
+				
+*/
 		
 	</style>
 	

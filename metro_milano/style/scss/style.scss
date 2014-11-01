@@ -1,0 +1,41 @@
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+@import '_extend.scss';
+
+
+/* Elementi di Layout */
+body{background:url(../../rete.png) no-repeat left top;padding:100px;font-family:Arial;width:3320px;height:2085px;}
+#header{height:150px;padding:22px 0 0 220px;position:relative;}
+#header h1, #header p{color: black;text-transform: uppercase;font-size: 70px;white-space: nowrap;font-family: arial;font-weight: bold;line-height: 60px;letter-spacing: -4px;margin-bottom: 17px;}
+#header p{font-weight:normal;margin:0;letter-spacing:-6px;}
+.logo { color: white; font-size: 136px; height: 152px; left: 0; padding: 20px 0 0; position: absolute; text-align: center; top: 0; width: 174px; font-weight: bold; } 
+#railway{position:relative;height:2085px;}
+
+/* 
+Macro-aree Linee 
+sono le macro aree che raggruppano le linee principali
+*/
+#redline{
+    @include macroAree(1398px, 1390px, 237px, 1018px);
+}
+#greenline{
+    @include macroAree(1237px, 1536px, 221px, 1763px);
+}
+#yellowline{
+    @include macroAree(1117px, 1310px, 313px, 492px);
+}
+#lillaline{
+    @include macroAree(44px, 530px, 426px, 1982px);
+}
+
+
+
+/*
+Fermata (li) di tipo:
+    - StopRect: con rettangolo
+    - StopCirlce: con cerchio
+    - terminal: capolinea
+*/
+
+
