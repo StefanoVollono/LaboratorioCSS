@@ -1,0 +1,16 @@
+1. Railway: la rete completa
+2. Suburban Railway: singole linee (ul) identificate con id univoci(redline,greenline etc)
+  - fermate normali (trainstop)
+    - Verticale dx (verticalRight)
+    - Verticale sx
+    - Obliquo sx
+    - obliqui dx
+      etc...
+  - capolinea
+  - etc...
+
+
+  Ogni singola fermata è costituita da
+  - un nome (nodo testo li)
+  - da un trattino -> :before
+  - segmento di linea principale corrispondente -> :after
